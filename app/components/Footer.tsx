@@ -1,13 +1,13 @@
 import React from "react";
 
-const Header = () => {
+const Footer = () => {
   return (
-    <header className="bg-blue-500 py-4">
+    <footer className="bg-slate-500">
       <div className="container mx-auto flex justify-center items-center">
         <h1 className="text-4xl text-white font-bold">Akbarsiddiq</h1>
       </div>
-    </header>
+    </footer>
   );
 };
 
-export default Header;
+export default Footer;
