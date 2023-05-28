@@ -16,8 +16,8 @@ export default function Home() {
         <section>
           <div className="container-fluid">
             <h1 className="text-4xl font-semibold text-gray-700 p-4">Cardes</h1>
-            <div className="flex flex-wrap justify-between p-4 ">
-              <div className="max-w-sm rounded overflow-hidden shadow-lg">
+            <div className="flex flex-wrap justify-between p-4">
+              <div className="max-w-sm rounded overflow-hidden bg-teal-200 shadow-lg">
                 <Image
                   src="/poto.jpg"
                   width={500}
@@ -46,7 +46,7 @@ export default function Home() {
                   </span>
                 </div>
               </div>
-              <div className="max-w-sm rounded overflow-hidden shadow-lg">
+              <div className="max-w-sm rounded overflow-hidden bg-teal-200 shadow-lg">
                 <Image
                   src="/poto.jpg"
                   width={500}
@@ -75,7 +75,7 @@ export default function Home() {
                   </span>
                 </div>
               </div>
-              <div className="max-w-sm rounded overflow-hidden shadow-lg">
+              <div className="max-w-sm rounded overflow-hidden bg-teal-200 shadow-lg">
                 <Image
                   src="/poto.jpg"
                   width={500}
