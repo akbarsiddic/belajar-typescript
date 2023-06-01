@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Table,
   TableBody,
@@ -17,6 +18,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 type Game = {
   id: number;
@@ -41,7 +43,7 @@ const getGames = async (): Promise<Game[]> => {
 
 // make a function to show the data with card
 const GameCard = ({ game }: { game: Game }) => (
-  <Card className="bg-gray-900 text-white rounded-lg shadow-lg overflow-hidden">
+  <Card className="bg-gray-900 text-white rounded-lg shadow-lg overflow-hidden  m-2">
     <CardHeader className="bg-indigo-600 py-4 px-6">
       <CardTitle className="text-2xl font-bold">{game.name}</CardTitle>
       <CardDescription className="text-gray-300">
@@ -61,12 +63,27 @@ const GameCard = ({ game }: { game: Game }) => (
         </div>
       )}
     </CardContent>
-    <CardFooter className="bg-indigo-600 py-4 px-6">
-      <a
-        href={`https://rawg.io/games/${game.slug}`}
-        className="text-sm text-blue-300 hover:text-blue-200 hover:underline">
-        Read More
-      </a>
+    <CardFooter className=" py-4 px-6">
+      <Link href={`/games/${game.slug}`}>
+        <Button className=" bg-indigo-600">
+          <svg
+            className="text-sm w-4 h-4 text-blue-300 mr-2 hover:text-blue-200 hover:underline"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4.5 12.75l6 6 9-13.5"
+            />
+          </svg>
+          <p className="text-sm text-blue-300 hover:text-blue-200 hover:underline">
+            Read More
+          </p>
+        </Button>
+      </Link>
     </CardFooter>
   </Card>
 );
