@@ -1,13 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-(module.exports = nextConfig),
-  {
-    images: {
-      remotePatterns: [
-        {
-          hostname: "media.wired.com",
-        },
-      ],
-    },
-  };
+module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "media.rawg.io",
+        port: "",
+        pathname: "/media/games/*/*",
+      },
+    ],
+  },
+};
